@@ -21,3 +21,9 @@ output "username" {
 
   description = "The name of the main PostgreSQL user."
 }
+
+output "postgresql_db_resource_id" {
+  value = aws_db_instance.postgresql.resource_id
+
+  description = "The resource ID of the database instance which hosts the TFE PostgreSQL instance."
+}
