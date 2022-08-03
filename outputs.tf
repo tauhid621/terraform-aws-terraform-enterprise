@@ -92,7 +92,7 @@ output "key" {
 }
 
 output "postgresql_db_resource_id" {
-  value = module.database.postgresql_db_resource_id
+  value =  local.enable_database_module ? module.database[0].postgresql_db_resource_id : null
 
   description = "The resource ID of the database instance which hosts the TFE PostgreSQL instance."
 }
