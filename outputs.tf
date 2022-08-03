@@ -92,7 +92,7 @@ output "key" {
 }
 
 output "postgresql_db_resource_id" {
-  value = module.aws_db_instance.postgresql.resource_id
+  value = module.database.aws_db_instance.postgresql.resource_id
 
   description = "The resource ID of the database instance which hosts the TFE PostgreSQL instance."
 }
