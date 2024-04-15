@@ -72,7 +72,7 @@ resource "aws_db_instance" "postgresql" {
   engine_version              = var.engine_version
   identifier_prefix           = "${var.friendly_name_prefix}-tfe"
   max_allocated_storage       = 0
-  multi_az                    = true
+  multi_az                    = false
   # no special characters allowed
   db_name                = var.db_name
   port                   = 5432
